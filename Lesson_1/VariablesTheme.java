@@ -1,22 +1,22 @@
-public class VariablesTheme{
+public class VariablesTheme { 
     public static void main(String[] args) {
         //Создание переменных и вывод их значений на консоль
         System.out.println("Создание переменных и вывод их значений на консоль");
 
-        byte numofcores = 8;
+        byte numOfCores = 8;
         short ram = 16;
         int screenWidth = 1920;
         long screenHeight = 1080;
-        float corefrequency = 2.6F;
+        float coreFrequency = 2.6F;
         double ssdVolume = 256.3;
         char systemDrive = 'C';
         boolean isForWork = true;
 
-        System.out.println("Количество ядер: " + numofcores);
+        System.out.println("Количество ядер: " + numOfCores);
         System.out.println("ОЗУ: " + ram);
         System.out.println("Ширина экрана: " + screenWidth);
         System.out.println("Высота экрана: " + screenHeight);
-        System.out.println("Частота процессора: " + corefrequency);
+        System.out.println("Частота процессора: " + coreFrequency);
         System.out.println("Обьем SSD: " + ssdVolume);
         System.out.println("Обозначение системного диска: " + systemDrive);
         System.out.println("Компьютер для работы: " + isForWork);
@@ -27,9 +27,9 @@ public class VariablesTheme{
         int priceX = 100;
         int priceY = 200;
         int discount = 11;
-        int totalprice = priceX + priceY;
-        int summDiscount = (priceX+priceY) * discount / 100;
-        int summDiscountPrice = totalprice - summDiscount;
+        int totalPrice = priceX + priceY;
+        int summDiscount = (priceX + priceY) * discount / 100;
+        int summDiscountPrice = totalPrice - summDiscount;
 
         System.out.println("Итоговая сумма товаров со скидкой: " + summDiscountPrice);
         System.out.println("Сумма скидки: " + summDiscount);
@@ -86,17 +86,17 @@ public class VariablesTheme{
         //Вывод символов и их кодов
         System.out.println("Вывод символов и их кодов");
 
-        int number1 = 35;
-        int number2 = 38;
-        int number3 = 64;
-        int number4 = 94;
-        int number5 = 95;
+        int lattice = 35;
+        int ampersand = 38;
+        int at = 64;
+        int symbol = 94;
+        int underscore = 95;
 
-        System.out.println("Символ числа: " + number1 + " будет " + (char) number1);
-        System.out.println("Символ числа: " + number2 + " будет " + (char) number2);
-        System.out.println("Символ числа: " + number3 + " будет " + (char) number3);
-        System.out.println("Символ числа: " + number4 + " будет " + (char) number4);
-        System.out.println("Символ числа: " + number5 + " будет " + (char) number5);
+        System.out.println("Символ числа: " + lattice + " будет " + (char) lattice);
+        System.out.println("Символ числа: " + ampersand + " будет " + (char) ampersand);
+        System.out.println("Символ числа: " + at + " будет " + (char) at);
+        System.out.println("Символ числа: " + symbol + " будет " + (char) symbol);
+        System.out.println("Символ числа: " + underscore + " будет " + (char) underscore);
 
         //Произведение и сумма цифр числа
         System.out.println("Произведение и сумма цифр числа");
@@ -105,35 +105,35 @@ public class VariablesTheme{
         int numof1 = srsNum / 100;
         int numof2 = (srsNum % 100) / 10;
         int numof3 = srsNum % 10;
-        int summnNumm = numof1 + numof2 + numof3;
+        int summNum = numof1 + numof2 + numof3;
         int compositionNumm = numof1 * numof2 * numof3;
 
-        System.out.println("Сумма числа 345 будет " + summnNumm);
+        System.out.println("Сумма числа 345 будет " + summNum);
         System.out.println("Произведение числа 345 будет " + compositionNumm);
 
         //Вывод на консоль ASCII-арт Дюка
         System.out.println("Вывод на консоль ASCII-арт Дюка");
 
-        char slash = 47;
+        char slash = '/';
         char backSlash = 92;
-        char bottomSpace = 95;
-        char bracket1 = 40;
-        char bracket2 = 41;
-        char space = 32;
+        char underScore = '_';
+        char bracket1 = '(';
+        char bracket2 = ')';
+        char space = ' ';
 
-        System.out.println("" +space + space + space + space + slash + backSlash + space + space + space+ space + space + "");
-        System.out.println("" +space + space + space + slash + space + space + backSlash + space + space + space + space + space + "");
-        System.out.println("" + space + space + slash + bottomSpace + bracket1 + space + bracket2 + backSlash + space + space + space + space + "");
+        System.out.println("" + space + space + space + space + slash + backSlash + space + space + space+ space + space + "");
+        System.out.println("" + space + space + space + slash + space + space + backSlash + space + space + space + space + space + "");
+        System.out.println("" + space + space + slash + underScore + bracket1 + space + bracket2 + backSlash + space + space + space + space + "");
         System.out.println("" + space + slash + space + space + space + space + space + space + backSlash+ space + space + space + "");
-        System.out.println("" + slash + bottomSpace + bottomSpace + bottomSpace + bottomSpace + slash + backSlash + bottomSpace + bottomSpace + backSlash + "");
+        System.out.println("" + slash + underScore + underScore + underScore + underScore + slash + backSlash + underScore + underScore + backSlash + "");
 
         //Отображение сотен, десятков, единиц числа
         System.out.println("Отображение сотен, десятков, единиц числа");
 
-        int variable = 123;
-        int hundreds = variable / 100;
-        int dozens = variable % 100 / 10;
-        int units = variable % 10;
+        int totalNum = 123;
+        int hundreds = totalNum / 100;
+        int dozens = totalNum % 100 / 10;
+        int units = totalNum % 10;
 
         System.out.println("Сотни числа 123: " + hundreds);
         System.out.println("Десятки числа 123: " + dozens);
