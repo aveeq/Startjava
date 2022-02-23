@@ -28,11 +28,11 @@ public class VariablesTheme {
         int priceY = 200;
         int discount = 11;
         int totalPrice = priceX + priceY;
-        int summDiscount = (priceX + priceY) * discount / 100;
-        int summDiscountPrice = totalPrice - summDiscount;
+        int sumDiscount = (priceX + priceY) * discount / 100;
+        int sumDiscountPrice = totalPrice - sumDiscount;
 
-        System.out.println("Итоговая сумма товаров со скидкой: " + summDiscountPrice);
-        System.out.println("Сумма скидки: " + summDiscount);
+        System.out.println("Итоговая сумма товаров со скидкой: " + sumDiscountPrice);
+        System.out.println("Сумма скидки: " + sumDiscount);
 
         //Вывод на консоль слова JAVA
         System.out.println("Вывод на консоль слова JAVA:");
@@ -101,15 +101,15 @@ public class VariablesTheme {
         //Произведение и сумма цифр числа
         System.out.println("Произведение и сумма цифр числа");
 
-        int srsNum = 345;
-        int numof1 = srsNum / 100;
-        int numof2 = (srsNum % 100) / 10;
-        int numof3 = srsNum % 10;
-        int summNum = numof1 + numof2 + numof3;
-        int compositionNumm = numof1 * numof2 * numof3;
+        int srcNum = 345;
+        int numof1 = srcNum / 100;
+        int numof2 = (srcNum % 100) / 10;
+        int numof3 = srcNum % 10;
+        int sumNum = numof1 + numof2 + numof3;
+        int compositionNum = numof1 * numof2 * numof3;
 
-        System.out.println("Сумма числа 345 будет " + summNum);
-        System.out.println("Произведение числа 345 будет " + compositionNumm);
+        System.out.println("Сумма числа 345 будет " + sumNum);
+        System.out.println("Произведение числа 345 будет " + compositionNum);
 
         //Вывод на консоль ASCII-арт Дюка
         System.out.println("Вывод на консоль ASCII-арт Дюка");
@@ -130,10 +130,10 @@ public class VariablesTheme {
         //Отображение сотен, десятков, единиц числа
         System.out.println("Отображение сотен, десятков, единиц числа");
 
-        int totalNum = 123;
-        int hundreds = totalNum / 100;
-        int dozens = totalNum % 100 / 10;
-        int units = totalNum % 10;
+        int srcNum1 = 123;
+        int hundreds = srcNum1 / 100;
+        int dozens = srcNum1 % 100 / 10;
+        int units = srcNum1 % 10;
 
         System.out.println("Сотни числа 123: " + hundreds);
         System.out.println("Десятки числа 123: " + dozens);
