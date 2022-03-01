@@ -174,6 +174,17 @@ public class IfElseStatementTheme {
 
         System.out.println("Площадь треугольника равна " + triangleS);
 
+        System.out.println("          /|");
+        System.out.println("         / |");
+        System.out.println("        /  |");
+        System.out.println("       /   |");
+        System.out.println("      /    |");
+        System.out.println("     /     |");
+        System.out.println("    /      |");
+        System.out.println("   /       |");
+        System.out.println("  /        |");
+        System.out.println("  _________| ");
+
         //Подсчет количества банкнот
         System.out.println("Подсчет количества банкнот");
 
