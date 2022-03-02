@@ -16,18 +16,20 @@ public class IfElseStatementTheme {
             System.out.println("Человек женского пола"); 
         }
 
-        float growth = 1.43F;
-        if (growth < 1.23){
-            System.out.println("Рост человека выше " + growth + "см");
+        float height = 1.43F;
+        if (height < 1.23) { 
+            System.out.println("Рост человека выше " + height + "см");
         } else {
-            System.out.println("Рост человека ниже " + growth + "см");
+            System.out.println("Рост человека ниже " + height + "см");
         }
 
         char firstNameLetter = "Kirill".charAt(0);
         if (firstNameLetter == 'M') {
-            System.out.println("Первая буква имени человека - " + firstNameLetter); } 
+            System.out.println("Первая буква имени человека - " + firstNameLetter);
+        } 
         else if (firstNameLetter == 'I') { 
-            System.out.println("Первая буква имени человека - " + firstNameLetter); } 
+            System.out.println("Первая буква имени человека - " + firstNameLetter);
+        } 
         else {
             System.out.println("Первая буква имени человека не M и не I");
         }
@@ -39,7 +41,7 @@ public class IfElseStatementTheme {
         int num2 = 64;
         if (num1 > num2) { 
             System.out.println("Число " + num1 + "больше чем число " + num2);
-        } else if (num1 < num2){
+        } else if (num1 < num2) {
             System.out.println("Число " + num1 + " меньше чем число " + num2);
         }
 
@@ -48,15 +50,15 @@ public class IfElseStatementTheme {
 
         int srcNum = 8;
         if (srcNum % 2 == 0) { 
-            System.out.println("Число " + srcNum + "является четным");
+            System.out.println("Число " + srcNum + " является четным");
         } else {
-            System.out.println("Число " + srcNum + "является нечетным");
+            System.out.println("Число " + srcNum + " является нечетным");
         }
         if (srcNum < 0){
             System.out.println("Число " + srcNum + " является отрицальным");
         } else if (srcNum > 0) {
             System.out.println("Число " + srcNum + "  является положительным");
-        } else if (srcNum == 0) {
+        } else {
             System.out.println("Число " + srcNum + " является нулем");
         }
 
@@ -83,8 +85,8 @@ public class IfElseStatementTheme {
         System.out.println("Определение буквы или символа по их коду");
 
         char symbol = '\u005A';
-        if ((symbol == 'A' && symbol == 'Z') || (symbol == 'a' && symbol == 'z') || (symbol == 'А' && symbol == 'Я') || (symbol == 'а' && symbol == 'я')) { 
-            System.out.println("Символ " + symbol + "является буквой " + "Z");
+        if ((symbol >= 'A' && symbol <= 'Z') || (symbol >= 'a' && symbol <= 'z') || (symbol >= 'А' && symbol <= 'Я') || (symbol >= 'а' && symbol <= 'я')) { 
+            System.out.println("Символ " + symbol + " является буквой " + "Z");
         } else if ((symbol == '0') || (symbol == '9')) { 
             System.out.println("Символ " + symbol + "является числом " + "1");
         } else {
@@ -97,29 +99,30 @@ public class IfElseStatementTheme {
         int depositAmount = 300_000;
         int percent = 0;
         int totalAmount;
-        if (depositAmount < 100_00){
-            System.out.println("если сумма вклада меньше " + 100_000 + " банк начисляет " + (percent = 5) + " процентов");
+        totalAmount = depositAmount * percent / 100;
+
+        if (depositAmount < 100_00) {
+            System.out.println("Если сумма вклада меньше " + 100_000 + " банк начисляет " + (percent = 5) + " процентов");
         } else if (depositAmount >= 150_000) {
-            System.out.println("если сумма вклада меньше " + 150_000 + " банк начисляет " + (percent = 7) + " процентов");
+            System.out.println("Если сумма вклада меньше " + 150_000 + " банк начисляет " + (percent = 7) + " процентов");
         } else if (depositAmount > 300_00) {
-            System.out.println("если сумма вклада больше " + 300_000 + " банк начисляет " + (percent = 10) + " процентов");
+            System.out.println("Если сумма вклада больше " + 300_000 + " банк начисляет " + (percent = 10) + " процентов");
         }
 
         totalAmount = depositAmount * percent / 100;
-        System.out.println("итоговая сумма с начисленными процентами будет " + totalAmount);
+        System.out.println("Итоговая сумма с начисленными процентами будет " + totalAmount);
 
         //Определение оценки по предметам
         System.out.println("Определение оценки по предметам");
 
         int scorePercentHistory = 59;
         int scorePercentProgramming = 91;
-        int scoreHistory;
-        int scoreProgramming;
+        double scoreHistory;
+        double scoreProgramming;
         double averagePercent = (scorePercentHistory + scorePercentProgramming) / 2;
         double scoreAverage;
 
-
-        if (scorePercentHistory >= 60)  { 
+        if (scorePercentHistory <= 60) { 
             scoreHistory = 2;
         } else if (scorePercentHistory > 60 && scorePercentHistory > 73) {
             scoreHistory = 3;
@@ -138,9 +141,11 @@ public class IfElseStatementTheme {
         } else { 
             scoreProgramming = 5;
         }
+
+        scoreAverage = (scoreProgramming + scoreHistory) / 2;
+
         System.out.println("Оценка по истории " + scoreHistory);
         System.out.println("Оценка по программированию " + scoreProgramming);
-        scoreAverage = (scoreProgramming + scoreHistory) / 2;
         System.out.println("Средний балл оценки по всем предметам " + scoreAverage);
         System.out.println("Средний процент по предметам " + averagePercent);
 
@@ -198,5 +203,5 @@ public class IfElseStatementTheme {
         System.out.println("Количество банкнот 10 :" + nominal10);
         System.out.println("Количество банкнот 1 :" + nominal1);
         System.out.println("Исходная сумма суммы 567 :" + originalSum);
-        }
     }
+}
