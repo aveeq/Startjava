@@ -87,7 +87,7 @@ public class IfElseStatementTheme {
         char symbol = '\u005A';
         if ((symbol >= 'A' && symbol <= 'Z') || (symbol >= 'a' && symbol <= 'z') || (symbol >= 'А' && symbol <= 'Я') || (symbol >= 'а' && symbol <= 'я')) { 
             System.out.println("Символ " + symbol + " является буквой " + "Z");
-        } else if ((symbol == '0') || (symbol == '9')) { 
+        } else if ((symbol >= '0') || (symbol <= '9')) { 
             System.out.println("Символ " + symbol + "является числом " + "1");
         } else {
             System.out.println("Символ " + symbol + "не число и не буква");
@@ -120,7 +120,6 @@ public class IfElseStatementTheme {
         double scoreHistory;
         double scoreProgramming;
         double averagePercent = (scorePercentHistory + scorePercentProgramming) / 2;
-        double scoreAverage;
 
         if (scorePercentHistory <= 60) { 
             scoreHistory = 2;
@@ -142,7 +141,7 @@ public class IfElseStatementTheme {
             scoreProgramming = 5;
         }
 
-        scoreAverage = (scoreProgramming + scoreHistory) / 2;
+        double scoreAverage = (scoreProgramming + scoreHistory) / 2;
 
         System.out.println("Оценка по истории " + scoreHistory);
         System.out.println("Оценка по программированию " + scoreProgramming);
@@ -169,7 +168,7 @@ public class IfElseStatementTheme {
         int sideY = 5;
         int sideZ = 9;
         int cornerSide = 90;
-        if(sideX + sideY > sideZ && sideX + sideZ > sideY && sideY + sideZ > sideX){
+        if((sideX + sideY > sideZ) && (sideX + sideZ > sideY) && (sideY + sideZ > sideX)) { 
             System.out.println("Такой треугольник существует!");
         } else {
             System.out.println("Такой треугольник существует не существует!");
