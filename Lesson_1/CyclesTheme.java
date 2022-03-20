@@ -146,13 +146,3 @@ public class CyclesTheme {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
