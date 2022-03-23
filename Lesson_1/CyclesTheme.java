@@ -180,7 +180,7 @@ public class CyclesTheme {
         //Определение, является ли число счастливым
         System.out.println("Определение, является ли число счастливым\n");
 
-                int happyNum = 781529;
+        int happyNum = 781529;
         int h1 = 0;
         int h2 = 0;
         int h3 = 0;
