@@ -195,7 +195,7 @@ public class CyclesTheme {
         System.out.println(" = " + sumFirstThree);
 
         int sumSecondThree = 0;
-        int secondPartNumber = 0;   
+        int secondPartNumber = 0;
 
         do {
             secondPartNumber++;
