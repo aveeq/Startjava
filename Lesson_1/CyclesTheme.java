@@ -23,25 +23,14 @@ public class CyclesTheme {
         //Вывод чисел между max и min
         System.out.println("Вывод чисел между max и min\n");
 
-        int num1 = 10;
-        int num2 = 5;
-        int num3 = -1;
+        int num1 = 0;
+        int maxValue = 9;
+        int minValue = 5;
         
-        int minValue = 0;
-        int maxValue = 0;
-        
-        if (num1 < num2) {
+        if (minValue > num1) {
             minValue = num1;
-            maxValue = num2;
-        } else{
-            minValue = num2;
-            maxValue = num1;
-        }
-
-        if (minValue > num3) {
-            minValue = num3;
-        } else { 
-            maxValue = num3;
+        } else {
+            minValue = maxValue;
         }
 
         for (int j = maxValue; j >= minValue; j--) {
@@ -76,12 +65,12 @@ public class CyclesTheme {
             System.out.printf("%3s", j);
             counter++;
         }
-            for (int j = 0; j < 5 - counter; j++) {
+        for (int j = 0; j < 5 - counter; j++) {
                 System.out.printf("%3s", 0);
             } System.out.println();
 
         //Проверка количества единиц на четность
-        System.out.println("\n. Проверка количества единиц на четность\n");
+        System.out.println("\n Проверка количества единиц на четность\n");
 
         int count = 0;
         int srcNum = 3141591;
@@ -107,7 +96,6 @@ public class CyclesTheme {
             }
             System.out.print("*");
         }
-
          System.out.println("\n");
 
         int num5 = 5;
@@ -142,18 +130,15 @@ public class CyclesTheme {
         //Отображение ASCII-символов
         System.out.println("Отображение ASCII-символов\n");
 
-            char symbolChar = 0;
-            System.out.println("DEC " + "Char");
-            for (int j = 0; j <= 127; j++) { 
-                if (j < 10) {
-                    System.out.println(j + "   " + symbolChar);
-                } else if (j < 100) { 
-                    System.out.println(j + "   " + symbolChar);
-                } else { 
-                    System.out.println(j + "   " + symbolChar);
-                }
-            symbolChar++;
+        char symbol = 0;
+        System.out.println("DEC " + "Char");
+        for (int j = 0; j <= 128; j++) { 
+            if (j < 128) {
+                System.out.printf(j + "%3s", symbol);
+                System.out.println();
             }
+        symbol++;
+        }
 
         //Проверка, является ли число палиндромом
         System.out.println("Проверка, является ли число палиндромом\n");
@@ -163,7 +148,7 @@ public class CyclesTheme {
         int x2 = 0;
         while (numP / 1 != 0) {
             x2 *= 10;
-            x2 = x2 + numP  % 10;
+            x2 += numP  % 10;
             numP  /= 10;
         }
 
@@ -176,44 +161,43 @@ public class CyclesTheme {
         //Определение, является ли число счастливым
         System.out.println("Определение, является ли число счастливым\n");
 
-        int srcNumber = 781529;
+        int srcNum1 = 781529;
         int digit1 = 0;
-        int sumFirstThree = 0;
-        int firstPartNumber = 0;
-        int halSrcNumber = srcNumber / 1000;
+        int sumThreeNum = 0;
+        int sumSecondThreeNum = 0;
+        int firstPartNum = 0;
+        int secondPartNum = 0;
 
-        do {
-            firstPartNumber++;
-            digit1 = srcNumber % 10;
-            srcNumber /= 10;
-            sumFirstThree += digit1;
-            System.out.print(digit1);
-            if (firstPartNumber < 3) {
-                System.out.print(" + ");
+
+        for (int j = 0; j < 6; j++) {
+            digit1 = srcNum1 % 10;
+            srcNum1 /= 10;
+
+            if (srcNum1 / 100 != 0) {
+                firstPartNum++;
+                sumThreeNum += digit1;
+                System.out.print(digit1);
+                if (firstPartNum < 3) {
+                    System.out.print(" + ");
+                } else if (firstPartNum == 3) {
+                    System.out.println(" = " + sumThreeNum);
+                }
+            } else {
+                secondPartNum++;
+                sumSecondThreeNum += digit1;
+                System.out.print(digit1);
+                if (secondPartNum < 3) {
+                    System.out.print(" + ");
+                } else if (secondPartNum == 3) {
+                    System.out.println(" = " + sumSecondThreeNum);
+                }
             }
-        } while (firstPartNumber < 3);
-        System.out.println(" = " + sumFirstThree);
-
-        int sumSecondThree = 0;
-        int secondPartNumber = 0;
-
-        do {
-            secondPartNumber++;
-            digit1 = halSrcNumber % 10;
-            halSrcNumber = halSrcNumber / 10;
-            sumSecondThree = sumSecondThree + digit1;
-            System.out.print(digit1);
-            if (secondPartNumber < 3) {
-                System.out.print(" + ");
-            }
-        } while (secondPartNumber < 3);
-        System.out.println(" = " + sumSecondThree);
-
-        if (sumFirstThree == sumSecondThree) {
+        }
+        if (sumThreeNum == sumSecondThreeNum) {
             System.out.println("Число счастливое!");
         } else {
             System.out.println("Число несчастливое!");
-        } System.out.println();
+        }
 
         //Вывод таблицы умножения Пифагора
         System.out.println("Вывод таблицы умножения Пифагора\n");
