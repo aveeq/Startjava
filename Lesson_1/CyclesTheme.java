@@ -67,7 +67,8 @@ public class CyclesTheme {
         }
         for (int j = 0; j < 5 - counter; j++) {
                 System.out.printf("%3s", 0);
-            } System.out.println();
+            } 
+            System.out.println();
 
         //Проверка количества единиц на четность
         System.out.println("\n Проверка количества единиц на четность\n");
@@ -124,7 +125,7 @@ public class CyclesTheme {
                 System.out.print("$");
             }
             System.out.println();
-            triangle++;
+                triangle++;
         } while(triangle <= 2);
 
         //Отображение ASCII-символов
@@ -134,10 +135,9 @@ public class CyclesTheme {
         System.out.println("DEC " + "Char");
         for (int j = 0; j <= 128; j++) { 
             if (j < 128) {
-                System.out.printf(j + "%3s", symbol);
-                System.out.println();
+                System.out.printf(j + "%3s\n", symbol);
             }
-        symbol++;
+            symbol++;
         }
 
         //Проверка, является ли число палиндромом
@@ -161,38 +161,29 @@ public class CyclesTheme {
         //Определение, является ли число счастливым
         System.out.println("Определение, является ли число счастливым\n");
 
-        int srcNum1 = 781529;
-        int digit1 = 0;
+       int srcNum1 = 781529;
+        int digit1 = 100000;
         int sumThreeNum = 0;
         int sumSecondThreeNum = 0;
         int firstPartNum = 0;
         int secondPartNum = 0;
+        int sumNum = 0;
 
 
-        for (int j = 0; j < 6; j++) {
-            digit1 = srcNum1 % 10;
-            srcNum1 /= 10;
+        for (int j = 0; j < 3; j++) {
+            firstPartNum = srcNum1 / digit1;
+            secondPartNum = srcNum1 % 10;
+            sumThreeNum = sumThreeNum + firstPartNum;
+            sumSecondThreeNum = sumSecondThreeNum + secondPartNum;
+            srcNum1 = srcNum1 % digit1 / 10;
+            digit1 = digit1 / 100;
+            sumNum = sumThreeNum + sumThreeNum;
 
-            if (srcNum1 / 100 != 0) {
-                firstPartNum++;
-                sumThreeNum += digit1;
-                System.out.print(digit1);
-                if (firstPartNum < 3) {
-                    System.out.print(" + ");
-                } else if (firstPartNum == 3) {
-                    System.out.println(" = " + sumThreeNum);
-                }
-            } else {
-                secondPartNum++;
-                sumSecondThreeNum += digit1;
-                System.out.print(digit1);
-                if (secondPartNum < 3) {
-                    System.out.print(" + ");
-                } else if (secondPartNum == 3) {
-                    System.out.println(" = " + sumSecondThreeNum);
-                }
-            }
         }
+            System.out.println("Число первой пары тройки = " + sumThreeNum);
+            System.out.println("Число второй пары тройки = " + sumSecondThreeNum);
+            System.out.println("Сумма тройки чисел : " + sumNum);
+            
         if (sumThreeNum == sumSecondThreeNum) {
             System.out.println("Число счастливое!");
         } else {
