@@ -89,7 +89,7 @@ public class CyclesTheme {
         }
 
         //Отображение фигур в консоли
-        System.out.println("Отображение фигур в консоли"); 
+        System.out.println("Отображение фигур в консоли\n"); 
 
         for (int j = 0; j < 50; j++) {
             if (j % 10 == 0) {
@@ -161,7 +161,7 @@ public class CyclesTheme {
         //Определение, является ли число счастливым
         System.out.println("Определение, является ли число счастливым\n");
 
-       int srcNum1 = 781529;
+        int srcNum1 = 781529;
         int digit1 = 100000;
         int sumThreeNum = 0;
         int sumSecondThreeNum = 0;
@@ -177,12 +177,11 @@ public class CyclesTheme {
             sumSecondThreeNum = sumSecondThreeNum + secondPartNum;
             srcNum1 = srcNum1 % digit1 / 10;
             digit1 = digit1 / 100;
-            sumNum = sumThreeNum + sumThreeNum;
 
         }
-            System.out.println("Число первой пары тройки = " + sumThreeNum);
-            System.out.println("Число второй пары тройки = " + sumSecondThreeNum);
-            System.out.println("Сумма тройки чисел : " + sumNum);
+            System.out.println("Сумма первой пары тройки = " + sumThreeNum);
+            System.out.println("Сумма второй пары тройки = " + sumSecondThreeNum);
+
             
         if (sumThreeNum == sumSecondThreeNum) {
             System.out.println("Число счастливое!");
