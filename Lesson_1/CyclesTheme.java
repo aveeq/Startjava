@@ -167,7 +167,7 @@ public class CyclesTheme {
         int sumSecondThreeNum = 0;
         int firstPartNum = 0;
         int secondPartNum = 0;
-        int number1 = srcNum1 / 100000;
+        int number1 = srcNum1 / digit1;
         int number2 = (srcNum1 / 10000) % 10;
         int number3 = (srcNum1 / 1000) % 10;
         int number4 = (srcNum1 / 100) % 10;
