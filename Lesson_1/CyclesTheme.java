@@ -167,8 +167,12 @@ public class CyclesTheme {
         int sumSecondThreeNum = 0;
         int firstPartNum = 0;
         int secondPartNum = 0;
-        int sumNum = 0;
-
+        int number1 = srcNum1 / 100000;
+        int number2 = (srcNum1 / 10000) % 10;
+        int number3 = (srcNum1 / 1000) % 10;
+        int number4 = (srcNum1 / 100) % 10;
+        int number5 = (srcNum1 / 10) % 10;
+        int number6 = srcNum1 % 10;
 
         for (int j = 0; j < 3; j++) {
             firstPartNum = srcNum1 / digit1;
@@ -177,12 +181,10 @@ public class CyclesTheme {
             sumSecondThreeNum = sumSecondThreeNum + secondPartNum;
             srcNum1 = srcNum1 % digit1 / 10;
             digit1 = digit1 / 100;
-
         }
-            System.out.println("Сумма первой пары тройки = " + sumThreeNum);
-            System.out.println("Сумма второй пары тройки = " + sumSecondThreeNum);
+            System.out.println(number1 + "+" + number2 + "+" + number3 + "=" + sumThreeNum);
+            System.out.println(number4 + "+" + number5 + "+" + number6 + "=" + sumSecondThreeNum);
 
-            
         if (sumThreeNum == sumSecondThreeNum) {
             System.out.println("Число счастливое!");
         } else {
