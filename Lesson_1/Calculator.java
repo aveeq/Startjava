@@ -1,5 +1,6 @@
 public class Calculator {
     public static void main(String[] args) {
+        //Калькулятор,который умеет выполнять следующие вычисления: +, -, *, /, ^, %
         int a = 8;
         int b = 2;
         int result = a;
