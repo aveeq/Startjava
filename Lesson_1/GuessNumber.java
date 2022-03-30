@@ -1,5 +1,6 @@
 public class GuessNumber {
     public static void main(String[] args) {
+        //Игра “Угадай число”
         int playerNum = 10;
         int hiddenNum = 5;
 
