@@ -1,9 +1,9 @@
 public class Person {
 
     String gender = "Male";
-    String name = "Kirill"ж
+    String name = "Kirill";
     float height = 1.89f;
-    float weight = 87f;
+    float weight = 87.0f;
     int age = 24;
 
     void go() {
