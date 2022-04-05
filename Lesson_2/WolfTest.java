@@ -17,5 +17,4 @@ public class WolfTest {
         System.out.println("Возраст: " + wolf.age);
         System.out.println("Цвет: " + wolf.color);
     }
-
 }
