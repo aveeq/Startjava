@@ -37,29 +37,29 @@ public class Calculator {
     }
 
     public double calc() {
-        switch(sign) {
-        case '+' :
-            result = a + b;
-            break;
-        case '-' :
-            result = a - b;
-            break;
-        case '*' :
-            result = a * b;
-            break;
-        case '/' :
-            result = a / b;
-            break;
-        case '%' : 
-            result = a % b;
-            break;
-        case '^' :
-            result = 1;
-            for(int i = 1; i <= b; i++) {
-                result *= a;
+            switch(sign) {
+            case '+' :
+                result = a + b;
+                break;
+            case '-' :
+                result = a - b;
+                break;
+            case '*' :
+                result = a * b;
+                break;
+            case '/' :
+                result = a / b;
+                break;
+            case '%' : 
+                result = a % b;
+                break;
+            case '^' :
+                result = 1;
+                for(int i = 1; i <= b; i++) {
+                    result *= a;
+                }
+                break;
             }
-            break;
+            return result;
         }
-        return result;
-    }
 }
